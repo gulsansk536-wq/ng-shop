@@ -8,7 +8,7 @@
 <title>NG SHOP | Chains & Bracelets</title>
 <style>
 :root{--ink:#171717;--muted:#77736d;--line:#e9e5df;--paper:#fff;--soft:#f8f7f4;--gold:#b58b52;--gold-dark:#8e6838;--green:#176b45;--danger:#b42318;--radius:18px;--shadow:0 8px 28px rgba(24,20,15,.06)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.announcement{background:#171717;color:#fff;text-align:center;padding:9px 12px;font-size:12px;letter-spacing:.04em}.site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.header-inner{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-size:25px;font-weight:850;letter-spacing:.13em;line-height:1}.brand small{display:block;font-size:9px;font-weight:600;letter-spacing:.27em;color:var(--muted);margin-top:6px}.header-actions{display:flex;align-items:center;gap:10px}.icon-btn,.cart-btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 15px;color:var(--ink)}.cart-btn{background:#171717;color:#fff;border-color:#171717;font-weight:650}.hero{max-width:1200px;margin:0 auto;padding:28px 20px 22px}.hero-panel{min-height:350px;overflow:hidden;border-radius:24px;background:#f4f1eb;display:grid;grid-template-columns:1.03fr .97fr;align-items:center}.hero-copy{padding:clamp(25px,5vw,62px)}.eyebrow{font-size:11px;font-weight:750;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark)}h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(36px,5vw,60px);line-height:1.06;font-weight:500;letter-spacing:-.035em;margin:14px 0}.hero-copy p{color:#625e58;max-width:390px;line-height:1.7;font-size:15px}.primary-btn{display:inline-flex;justify-content:center;align-items:center;border:0;border-radius:999px;background:#171717;color:#fff;padding:13px 22px;font-weight:700;margin-top:12px}.primary-btn:active,.add-btn:active{transform:scale(.99)}.hero-image{height:100%;min-height:350px;background:#e7e1d8}.hero-image img{width:100%;height:100%;min-height:350px;object-fit:cover;display:block}.trust-row{max-width:1200px;margin:0 auto;padding:4px 20px 28px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.trust{padding:14px 10px;text-align:center;border:1px solid var(--line);border-radius:14px;font-size:12px;color:#5f5b55}.trust b{display:block;color:var(--ink);font-size:13px;margin-bottom:4px}.shop{max-width:1200px;margin:auto;padding:10px 20px 60px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:14px;margin-bottom:20px}.section-head h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(28px,4vw,38px);margin:0}.section-head p{color:var(--muted);font-size:13px;margin:7px 0 0}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.search{flex:1;min-width:160px;border:1px solid var(--line);border-radius:999px;padding:11px 15px;background:#fff;outline:none}.search:focus,select:focus,input:focus,textarea:focus{border-color:var(--gold);outline:2px solid #b58b5222}.filter-btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 15px;font-size:13px}.filter-btn.active{background:#171717;color:#fff;border-color:#171717}.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.product-card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;min-width:0;transition:transform .2s,box-shadow .2s}.product-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.product-photo{position:relative;background:#f4f1eb;aspect-ratio:4/4.3;overflow:hidden}.product-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}.product-card:hover .product-photo img{transform:scale(1.035)}.tag{position:absolute;left:10px;top:10px;background:#fff;border-radius:999px;padding:5px 9px;font-size:10px;font-weight:700;letter-spacing:.04em}.product-info{padding:14px}.product-name{font-size:15px;font-weight:750;line-height:1.35;margin:0 0 5px}.product-category{color:var(--muted);font-size:12px;margin-bottom:12px}.price-row{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:10px}.price{font-size:19px;font-weight:800}.stock{font-size:10px;color:var(--green);white-space:nowrap}.size-select{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:12px;margin-bottom:9px}.add-btn{width:100%;border:0;border-radius:10px;background:var(--gold);color:#fff;padding:11px 10px;font-size:13px;font-weight:750}.add-btn:disabled{background:#d8d4ce;color:#777;cursor:not-allowed}.empty{grid-column:1/-1;text-align:center;padding:40px 12px;color:var(--muted)}.note{font-size:12px;color:var(--muted);line-height:1.6;margin:18px 0 0}.footer{background:#171717;color:#fff;padding:34px 20px}.footer-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer p{color:#c9c5be;font-size:12px;line-height:1.7;max-width:440px}.footer small{color:#c9c5be}.overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:50;display:none}.overlay.show{display:block}.drawer{position:absolute;right:0;top:0;height:100%;width:min(440px,100%);background:#fff;display:flex;flex-direction:column;padding:20px;overflow:auto}.drawer-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px}.drawer-head h2{font-family:Georgia,serif;font-weight:500;margin:0}.close-btn{border:1px solid var(--line);background:#fff;border-radius:50%;width:38px;height:38px;font-size:20px}.cart-items{flex:1;padding:12px 0}.cart-item{display:grid;grid-template-columns:64px 1fr auto;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);align-items:center}.cart-item img{width:64px;height:70px;object-fit:cover;border-radius:10px;background:var(--soft)}.cart-item h3{font-size:13px;margin:0 0 5px}.cart-item p{font-size:11px;color:var(--muted);margin:0 0 6px}.qty{display:flex;align-items:center;gap:9px}.qty button{width:26px;height:26px;border:1px solid var(--line);border-radius:50%;background:#fff}.remove-btn{border:0;background:none;color:var(--danger);font-size:11px;padding:5px 0}.cart-total{display:flex;justify-content:space-between;font-size:18px;font-weight:800;padding:14px 0;border-top:1px solid var(--line)}.checkout-form{display:grid;gap:10px}.checkout-form input,.checkout-form textarea,.checkout-form select{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff}.checkout-form textarea{min-height:72px;resize:vertical}.checkout-form label{font-size:12px;color:#5e5a54}.checkout-form .primary-btn{width:100%;margin-top:0}.fineprint{font-size:11px;line-height:1.55;color:var(--muted)}.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:80;background:#171717;color:#fff;border-radius:999px;padding:12px 18px;font-size:13px;box-shadow:var(--shadow);display:none;max-width:90%;text-align:center}.toast.show{display:block}.hidden{display:none!important}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.announcement{background:#171717;color:#fff;text-align:center;padding:9px 12px;font-size:12px;letter-spacing:.04em}.site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.header-inner{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-size:25px;font-weight:850;letter-spacing:.13em;line-height:1}.brand small{display:block;font-size:9px;font-weight:600;letter-spacing:.27em;color:var(--muted);margin-top:6px}.header-actions{display:flex;align-items:center;gap:10px}.icon-btn,.cart-btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 15px;color:var(--ink)}.cart-btn{background:#171717;color:#fff;border-color:#171717;font-weight:650}.hero{max-width:1200px;margin:0 auto;padding:28px 20px 22px}.hero-panel{min-height:350px;overflow:hidden;border-radius:24px;background:#f4f1eb;display:grid;grid-template-columns:1.03fr .97fr;align-items:center}.hero-copy{padding:clamp(25px,5vw,62px)}.eyebrow{font-size:11px;font-weight:750;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark)}h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(36px,5vw,60px);line-height:1.06;font-weight:500;letter-spacing:-.035em;margin:14px 0}.hero-copy p{color:#625e58;max-width:390px;line-height:1.7;font-size:15px}.primary-btn{display:inline-flex;justify-content:center;align-items:center;border:0;border-radius:999px;background:#171717;color:#fff;padding:13px 22px;font-weight:700;margin-top:12px}.primary-btn:active,.add-btn:active{transform:scale(.99)}.hero-image{height:100%;min-height:350px;background:#e7e1d8}.hero-image img{width:100%;height:100%;min-height:350px;object-fit:cover;display:block}.trust-row{max-width:1200px;margin:0 auto;padding:4px 20px 28px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.trust{padding:14px 10px;text-align:center;border:1px solid var(--line);border-radius:14px;font-size:12px;color:#5f5b55}.trust b{display:block;color:var(--ink);font-size:13px;margin-bottom:4px}.shop{max-width:1200px;margin:auto;padding:10px 20px 60px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:14px;margin-bottom:20px}.section-head h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(28px,4vw,38px);margin:0}.section-head p{color:var(--muted);font-size:13px;margin:7px 0 0}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.search{flex:1;min-width:160px;border:1px solid var(--line);border-radius:999px;padding:11px 15px;background:#fff;outline:none}.search:focus,select:focus,input:focus,textarea:focus{border-color:var(--gold);outline:2px solid #b58b5222}.filter-btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 15px;font-size:13px}.filter-btn.active{background:#171717;color:#fff;border-color:#171717}.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.product-card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;min-width:0;transition:transform .2s,box-shadow .2s}.product-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.product-photo{position:relative;background:#f4f1eb;aspect-ratio:4/4.3;overflow:hidden}.product-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}.product-card:hover .product-photo img{transform:scale(1.035)}.tag{position:absolute;left:10px;top:10px;background:#fff;border-radius:999px;padding:5px 9px;font-size:10px;font-weight:700;letter-spacing:.04em}.product-info{padding:14px}.product-name{font-size:15px;font-weight:750;line-height:1.35;margin:0 0 5px}.product-category{color:var(--muted);font-size:12px;margin-bottom:12px}.price-row{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:10px}.price{font-size:19px;font-weight:800}.stock{font-size:10px;color:var(--green);white-space:nowrap}.size-select{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:12px;margin-bottom:9px}.add-btn{width:100%;border:0;border-radius:10px;background:var(--gold);color:#fff;padding:11px 10px;font-size:13px;font-weight:750}.add-btn:disabled{background:#d8d4ce;color:#777;cursor:not-allowed}.empty{grid-column:1/-1;text-align:center;padding:40px 12px;color:var(--muted)}.note{font-size:12px;color:var(--muted);line-height:1.6;margin:18px 0 0}.footer{background:#171717;color:#fff;padding:34px 20px}.footer-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer p{color:#c9c5be;font-size:12px;line-height:1.7;max-width:440px}.footer small{color:#c9c5be}.overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:50;display:none}.overlay.show{display:block}.drawer{position:absolute;right:0;top:0;height:100%;width:min(440px,100%);background:#fff;display:flex;flex-direction:column;padding:20px;overflow:auto}.drawer-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px}.drawer-head h2{font-family:Georgia,serif;font-weight:500;margin:0}.close-btn{border:1px solid var(--line);background:#fff;border-radius:50%;width:38px;height:38px;font-size:20px}.cart-items{flex:1;padding:12px 0}.cart-item{display:grid;grid-template-columns:64px 1fr auto;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);align-items:center}.cart-item img{width:64px;height:70px;object-fit:cover;border-radius:10px;background:var(--soft)}.cart-item h3{font-size:13px;margin:0 0 5px}.cart-item p{font-size:11px;color:var(--muted);margin:0 0 6px}.qty{display:flex;align-items:center;gap:9px}.qty button{width:26px;height:26px;border:1px solid var(--line);border-radius:50%;background:#fff}.remove-btn{border:0;background:none;color:var(--danger);font-size:11px;padding:5px 0}.cart-total{display:flex;justify-content:space-between;font-size:18px;font-weight:800;padding:14px 0;border-top:1px solid var(--line)}.checkout-form{display:grid;gap:10px}.checkout-form input,.checkout-form textarea,.checkout-form select{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff}.checkout-form textarea{min-height:72px;resize:vertical}.checkout-form label{font-size:12px;color:#5e5a54}.checkout-form .primary-btn{width:100%;margin-top:0}.fineprint{font-size:11px;line-height:1.55;color:var(--muted)}.payment-step{border:1px solid var(--line);border-radius:16px;padding:14px;background:#fff;display:grid;gap:12px;margin:6px 0}.payment-step-top{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.step-kicker{font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--muted)}.secure-label{font-size:10px;font-weight:700;color:var(--green)}.payment-step h3{font-size:22px;margin:0;font-family:Georgia,serif;font-weight:600}.payment-amount{display:flex;justify-content:space-between;align-items:center;background:var(--soft);border-radius:12px;padding:13px}.payment-amount span{font-size:12px;color:var(--muted)}.payment-amount strong{font-size:24px}.payment-step>label{font-weight:700;color:var(--ink)}.payment-option{position:relative}.payment-option:has(input:checked){border-color:var(--green);background:#f7fbf8;box-shadow:0 0 0 1px var(--green) inset}.payment-option input{margin:0}.payment-check{display:none!important;margin-left:auto;color:var(--green);font-size:18px;font-weight:900}.payment-option:has(input:checked) .payment-check{display:block!important}.payment-badge{display:inline-block!important;width:max-content;background:#e9f5ed;color:var(--green)!important;border-radius:999px;padding:3px 7px;font-weight:700}.upi-details strong{color:var(--danger)}.payment-options{display:grid;gap:8px}.payment-option{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--line);border-radius:12px;background:#fff;cursor:pointer}.payment-option input{width:18px;height:18px;flex:0 0 auto;accent-color:#171717}.payment-option span{display:grid;gap:3px}.payment-option b{font-size:13px;color:var(--ink)}.payment-option small{font-size:11px;color:var(--muted)}.upi-details{border:1px solid #ded5c6;border-radius:12px;background:#faf8f4;padding:12px;font-size:12px;line-height:1.5}.upi-details p{margin:8px 0 0;color:var(--muted)}.copy-upi{margin-left:8px;border:1px solid var(--line);border-radius:999px;background:white;padding:5px 9px;font-size:11px}.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:80;background:#171717;color:#fff;border-radius:999px;padding:12px 18px;font-size:13px;box-shadow:var(--shadow);display:none;max-width:90%;text-align:center}.toast.show{display:block}.hidden{display:none!important}
 @media(max-width:900px){.product-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.hero-panel{min-height:300px}.hero-image,.hero-image img{min-height:300px}}
 @media(max-width:620px){.announcement{font-size:10px}.header-inner{padding:13px 15px}.brand{font-size:22px}.hero{padding:16px 14px 14px}.hero-panel{grid-template-columns:1fr;min-height:0;border-radius:18px}.hero-copy{padding:25px 22px 16px}.hero-copy h1{font-size:39px}.hero-copy p{font-size:13px;margin-bottom:8px}.hero-image,.hero-image img{min-height:0;height:205px}.trust-row{padding:0 14px 22px;gap:7px}.trust{padding:11px 5px;font-size:10px}.trust b{font-size:11px}.shop{padding:8px 14px 42px}.section-head{align-items:start;flex-direction:column}.section-head h2{font-size:30px}.filters{margin:15px 0}.search{flex-basis:100%}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-card{border-radius:14px}.product-info{padding:10px}.product-name{font-size:13px;min-height:35px}.product-category{font-size:11px;margin-bottom:10px}.price{font-size:17px}.stock{font-size:9px}.product-photo{aspect-ratio:1/1.08}.tag{left:7px;top:7px;font-size:9px;padding:4px 7px}.size-select{font-size:11px;padding:8px}.add-btn{font-size:12px;padding:10px 6px}.icon-btn{display:none}.footer{padding:28px 16px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
@@ -69,9 +69,27 @@
       <label for="customerCity">City / Town *</label><input id="customerCity" name="customerCity" required maxlength="100" placeholder="City / town">
       <label for="customerState">State *</label><input id="customerState" name="customerState" required maxlength="100" placeholder="State">
       <label for="customerPin">PIN code *</label><input id="customerPin" name="customerPin" required inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="6-digit PIN code">
+      <section class="payment-step" aria-labelledby="paymentStepTitle">
+        <div class="payment-step-top"><span class="step-kicker">CHECKOUT · STEP 3 OF 3</span><span class="secure-label">♧ Secure checkout</span></div>
+        <h3 id="paymentStepTitle">Payments</h3>
+        <div class="payment-amount"><span>Total Amount</span><strong id="paymentTotal">₹0</strong></div>
+        <label>Choose a payment method *</label>
+        <div class="payment-options" role="radiogroup" aria-label="Choose payment method">
+          <label class="payment-option"><input type="radio" name="paymentMethod" value="UPI" required checked><span><b>UPI</b><small>Pay by PhonePe, Google Pay, or any UPI app</small><small class="payment-badge">Recommended for you</small></span><span class="payment-check" aria-hidden="true">✓</span></label>
+          <label class="payment-option"><input type="radio" name="paymentMethod" value="COD" required><span><b>Cash on Delivery</b><small>Pay when your parcel arrives</small></span><span class="payment-check" aria-hidden="true">✓</span></label>
+        </div>
+        <div id="upiDetails" class="upi-details"><b>UPI ID:</b> <span id="upiIdText">gulsansk536-1@oksbi</span><button type="button" class="copy-upi" id="copyUpi">Copy UPI ID</button><p>After placing your order, pay the exact amount in your UPI app and share the payment confirmation with NG SHOP. <strong>This website cannot automatically verify UPI payments.</strong> Do not pay twice; check your UPI app before retrying.</p></div>
+      </section>
       <label for="customerNote">Order note (optional)</label><textarea id="customerNote" name="customerNote" maxlength="300" placeholder="Any special instructions"></textarea>
-      <button class="primary-btn" type="submit">Send order on WhatsApp</button>
-      <p class="fineprint">This button opens WhatsApp with your order details for you to send. It does not charge the customer or confirm payment. Online payments must be integrated separately through a payment provider and a secure backend before taking prepaid orders.</p>
+      <button class="primary-btn" type="submit" id="checkoutSubmit">Continue to payment</button>
+      <section id="paymentNextStep" class="upi-details hidden" aria-live="polite">
+        <b>Next step: complete your UPI payment</b>
+        <p>UPI app খোলে পেমেন্ট সম্পূর্ণ করো। তারপর NG SHOP-এ অর্ডার ডিটেলস পাঠাতে নিচের বাটনে চাপো।</p>
+        <p><strong>সতর্কতা:</strong> ওয়েবসাইট পেমেন্ট যাচাই করতে পারে না। টাকা সত্যিই কেটে গেছে কি না UPI অ্যাপে দেখে নাও। এই বাটন চাপলে শুধু WhatsApp-এ মেসেজ যাবে—পেমেন্টের প্রমাণ হবে না।</p>
+        <button type="button" class="primary-btn" id="paidContinueWhatsApp">পেমেন্ট করেছি — WhatsApp-এ ডিটেলস পাঠাও</button>
+        <button type="button" class="copy-upi" id="cancelPaymentFlow">ফিরে গিয়ে আবার চেক করো</button>
+      </section>
+      <p class="fineprint">UPI পেমেন্ট এই ওয়েবসাইট স্বয়ংক্রিয়ভাবে যাচাই করতে পারে না। NG SHOP-এর মালিককে নিজের UPI/ব্যাংক অ্যাপে টাকা পাওয়ার বিষয়টি যাচাই করে তবেই অর্ডার পাঠাতে হবে। COD অর্ডারও পাঠানোর আগে নিশ্চিত করতে হবে।</p>
     </form>
   </aside>
 </div>
@@ -86,7 +104,8 @@
 */
 const STORE = {
   name: "NG SHOP",
-  whatsappNumber: "917047156978"
+  whatsappNumber: "917047156978",
+  upiId: "gulsansk536-1@oksbi"
 };
 
 /* A null price means "price not set"; customers cannot add that variant to cart.
@@ -170,7 +189,7 @@ function changeQty(key,delta){
   saveCart();renderCart();
 }
 function renderCart(){
-  $("cartCount").textContent=cartQty();$("cartTotal").textContent=money(cartTotal());const root=$("cartItems");root.innerHTML="";
+  $("cartCount").textContent=cartQty();$("cartTotal").textContent=money(cartTotal());const paymentTotal=$("paymentTotal");if(paymentTotal)paymentTotal.textContent=money(cartTotal());const root=$("cartItems");root.innerHTML="";
   const entries=Object.entries(cart);
   if(!entries.length){root.innerHTML='<div class="empty">Your bag is empty.<br><a href="#shop" id="continueShopping" style="text-decoration:underline;color:#8e6838">Explore the collection</a></div>';return;}
   for(const [key,item] of entries){
@@ -188,21 +207,45 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")closeCart();});
 $("searchInput").addEventListener("input",renderProducts);
 document.querySelectorAll("[data-filter]").forEach(btn=>btn.addEventListener("click",()=>{activeFilter=btn.dataset.filter;document.querySelectorAll("[data-filter]").forEach(b=>b.classList.toggle("active",b===btn));renderProducts();}));
 
+let pendingWhatsAppUrl="";
+const pendingPaymentKey="ngShopPendingPayment";
+function showPendingPayment(url){
+  pendingWhatsAppUrl=url;
+  try{sessionStorage.setItem(pendingPaymentKey,url);}catch(_){}
+  $("paymentNextStep").classList.remove("hidden");
+  $("checkoutSubmit").classList.add("hidden");
+  $("paymentNextStep").scrollIntoView({behavior:"smooth",block:"center"});
+}
+try{
+  const savedPending=sessionStorage.getItem(pendingPaymentKey);
+  if(savedPending){showPendingPayment(savedPending);}
+}catch(_){}
+
 $("checkoutForm").addEventListener("submit",e=>{
   e.preventDefault();
   if(!Object.keys(cart).length){showToast("Your bag is empty.");return;}
   if(!/^[0-9]{10,15}$/.test(STORE.whatsappNumber)){showToast("WhatsApp নম্বরটি কোডে ঠিক করে বসাতে হবে।");return;}
   for(const item of Object.values(cart)){const p=products.find(x=>x.id===item.id);if(!p||getPrice(p,item.size)!==item.price||item.qty>p.stock){showToast("দাম বা স্টক বদলেছে। কার্ট যাচাই করে আবার চেষ্টা করো।");return;}}
   const f=new FormData(e.currentTarget);
+  const paymentMethod=f.get("paymentMethod");
   const lines=Object.values(cart).map(item=>{const p=products.find(x=>x.id===item.id);return `• ${p.name} | Size: ${item.size} | Qty: ${item.qty} | ${money(item.price*item.qty)}`;});
   const orderId="NG"+Date.now().toString().slice(-8);
+  const upiLink="upi://pay?pa="+encodeURIComponent(STORE.upiId)+"&pn="+encodeURIComponent(STORE.name)+"&am="+encodeURIComponent(cartTotal().toFixed(2))+"&cu=INR&tn="+encodeURIComponent("Order "+orderId);
+  const paymentLines=paymentMethod==="UPI"?[
+    "Payment method: UPI (PhonePe / Google Pay / other UPI app)",
+    `UPI ID: ${STORE.upiId}`,
+    `UPI payment link: ${upiLink}`,
+    `Amount to pay: ${money(cartTotal())}`,
+    "Customer action: Customer says payment was made; NOT VERIFIED by website",
+    "Payment status: UNVERIFIED — seller must check bank/UPI app receipt before dispatch"
+  ]:["Payment method: Cash on Delivery (COD)","Payment status: Pay on delivery; order needs seller confirmation"];
   const message=[
     `New order request — ${STORE.name}`,
     `Order reference: ${orderId}`,"",
     ...lines,"",
     `Product total: ${money(cartTotal())}`,
     "Shipping: To be confirmed",
-    "Payment: Not yet collected / pending confirmation","",
+    ...paymentLines,"",
     `Name: ${f.get("customerName")}`,
     `Phone: ${f.get("customerPhone")}`,
     `Address: ${f.get("customerAddress")}`,
@@ -210,11 +253,39 @@ $("checkoutForm").addEventListener("submit",e=>{
     `State: ${f.get("customerState")}`,
     `PIN: ${f.get("customerPin")}`,
     `Note: ${f.get("customerNote")||"None"}`,"",
-    "Please confirm stock, shipping charge and payment before dispatch."
+    "Please confirm stock, shipping charge and order details. For UPI, verify actual money receipt independently before dispatch."
   ].join("\n");
   const url="https://wa.me/"+STORE.whatsappNumber+"?text="+encodeURIComponent(message);
+  if(paymentMethod==="UPI"){
+    showPendingPayment(url);
+    // Open UPI app first. The site cannot observe or verify the payment result.
+    window.location.href=upiLink;
+  }else{
+    window.location.href=url;
+  }
+});
+$("paidContinueWhatsApp").addEventListener("click",()=>{
+  const url=pendingWhatsAppUrl||(()=>{try{return sessionStorage.getItem(pendingPaymentKey)||"";}catch(_){return "";}})();
+  if(!url){showToast("অর্ডার ডিটেলস পাওয়া যায়নি। ফর্ম আবার পূরণ করো।");return;}
+  // Clear the saved handoff only after the customer explicitly continues to WhatsApp.
+  try{sessionStorage.removeItem(pendingPaymentKey);}catch(_){}
   window.location.href=url;
 });
+$("cancelPaymentFlow").addEventListener("click",()=>{
+  $("paymentNextStep").classList.add("hidden");
+  $("checkoutSubmit").classList.remove("hidden");
+  pendingWhatsAppUrl="";
+  try{sessionStorage.removeItem(pendingPaymentKey);}catch(_){}
+});
+$("checkoutForm").querySelectorAll('input[name="paymentMethod"]').forEach(input=>input.addEventListener("change",()=>{$("upiDetails").style.display=input.value==="UPI"&&input.checked?"block":(document.querySelector('input[name="paymentMethod"]:checked')?.value==="UPI"?"block":"none");}));
+$("copyUpi").addEventListener("click",async()=>{try{await navigator.clipboard.writeText(STORE.upiId);showToast("UPI ID copied.");}catch(_){showToast("UPI ID: "+STORE.upiId);}});
+function updatePaymentChoice(){
+  const selected=document.querySelector('input[name="paymentMethod"]:checked');
+  const details=$("upiDetails");
+  if(details)details.classList.toggle("hidden",!selected||selected.value!=="UPI");
+}
+document.querySelectorAll('input[name="paymentMethod"]').forEach(input=>input.addEventListener("change",updatePaymentChoice));
+updatePaymentChoice();
 $("year").textContent=new Date().getFullYear();
 renderProducts();renderCart();
 </script>
