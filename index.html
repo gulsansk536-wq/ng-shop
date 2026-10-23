@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111827">
+<title>NG SHOP | Chains & Bracelets</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f8f7f5;color:#222}
+header{background:#111827;color:white;padding:17px;position:sticky;top:0;z-index:2}
+nav{max-width:1000px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.logo{font-size:25px;font-weight:900;letter-spacing:1px}
+button{border:0;padding:12px 16px;border-radius:9px;background:#b58b54;color:white;font-weight:bold;cursor:pointer}
+main{max-width:1000px;margin:auto;padding:16px}
+.hero{background:linear-gradient(135deg,#252a35,#6b6259);color:white;padding:32px 22px;border-radius:18px;margin-bottom:22px}
+.hero h1{font-size:34px;margin:0 0 12px}
+.hero p{line-height:1.6;color:#eee}
+h2{margin-top:24px}
+.filters{display:flex;gap:8px;margin:15px 0;flex-wrap:wrap}
+input,select,textarea{padding:12px;border:1px solid #ddd;border-radius:9px;font-size:15px;min-width:0}
+#search{flex:1;min-width:150px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{background:white;border:1px solid #eee;border-radius:13px;overflow:hidden}
+.art{height:140px;background:#e9e5df;display:flex;align-items:center;justify-content:center;font-size:52px}
+.info{padding:12px}
+.info h3{font-size:15px;margin:0 0 8px}
+.info p{font-size:12px;color:#666;min-height:30px}
+.price{font-size:19px;font-weight:bold;margin:10px 0}
+.info button{width:100%;padding:10px 4px}
+.panel{background:white;border:1px solid #eee;border-radius:13px;padding:16px;margin-top:20px}
+.cartrow{display:flex;justify-content:space-between;gap:8px;padding:12px 0;border-bottom:1px solid #eee}
+.cartrow button{padding:5px 10px}
+form{display:grid;gap:10px}
+form input,form textarea{width:100%}
+form textarea{min-height:75px}
+.small{font-size:12px;color:#666;line-height:1.6}
+footer{text-align:center;padding:25px;color:#666;font-size:12px}
+@media(min-width:650px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.art{height:180px}}
+</style>
+</head>
+<body>
+<header><nav><div class="logo">NG SHOP</div><button onclick="document.getElementById('cart').scrollIntoView({behavior:'smooth'})">Cart (<span id="count">0</span>)</button></nav></header>
+<main>
+<section class="hero">
+<h1>Style That Speaks.</h1>
+<p>Discover stylish chains and bracelets for your everyday look. Explore your favourite designs at NG SHOP.</p>
+<button onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Shop Now</button>
+</section>
+
+<section id="shop">
+<h2>Our Collection</h2>
+<div class="filters">
+<input id="search" placeholder="Search products..." oninput="render()">
+<select id="category" onchange="render()">
+<option value="All">All Products</option>
+<option value="Neck Chains">Neck Chains</option>
+<option value="Bracelets">Bracelets</option>
+<option value="Jewellery Sets">Jewellery Sets</option>
+</select>
+</div>
+<div class="grid" id="products"></div>
+</section>
+
+<section class="panel" id="cart">
+<h2>Your Cart</h2>
+<div id="cartitems">Your cart is empty.</div>
+<h3 id="total">Total: ₹0</h3>
+</section>
+
+<section class="panel" id="checkout">
+<h2>Delivery Details</h2>
+<p class="small">Enter your details to prepare an order. Online payment and actual order submission are not enabled yet.</p>
+<form id="orderform">
+<input name="name" placeholder="Full name" required maxlength="80">
+<input name="phone" type="tel" placeholder="10-digit mobile number" pattern="[6-9][0-9]{9}" required>
+<textarea name="address" placeholder="Full delivery address" required maxlength="300"></textarea>
+<input name="city" placeholder="City" required maxlength="80">
+<input name="state" placeholder="State" required maxlength="80">
+<input name="pin" placeholder="6-digit PIN code" inputmode="numeric" pattern="[1-9][0-9]{5}" required>
+<button type="submit">Review Order</button>
+</form>
+<p class="small" id="message" aria-live="polite"></p>
+</section>
+</main>
+<footer>NG SHOP · Chains & Bracelets<br>Product prices and availability will be updated soon.<br>Secure payment, shipping and return policies must be configured before launch.</footer>
+<script>
+const products=[
+{id:1,name:"Classic Silver Chain",cat:"Neck Chains",price:299,icon:"⛓️"},
+{id:2,name:"Woven Silver Bracelet",cat:"Bracelets",price:249,icon:"🔗"},
+{id:3,name:"Stainless Steel Chain",cat:"Neck Chains",price:349,icon:"⛓️"},
+{id:4,name:"Modern Link Bracelet",cat:"Bracelets",price:279,icon:"🔗"},
+{id:5,name:"Premium Style Chain",cat:"Neck Chains",price:399,icon:"✨"},
+{id:6,name:"Everyday Bracelet",cat:"Bracelets",price:199,icon:"🔗"},
+{id:7,name:"Bold Link Chain",cat:"Neck Chains",price:449,icon:"⛓️"},
+{id:8,name:"Silver Tone Bracelet",cat:"Bracelets",price:299,icon:"✨"},
+{id:9,name:"Minimal Chain",cat:"Neck Chains",price:229,icon:"⛓️"},
+{id:10,name:"Classic Link Bracelet",cat:"Bracelets",price:259,icon:"🔗"},
+{id:11,name:"Chain and Bracelet Set",cat:"Jewellery Sets",price:599,icon:"💎"},
+{id:12,name:"Premium Gift Set",cat:"Jewellery Sets",price:699,icon:"🎁"},
+{id:13,name:"Textured Silver Chain",cat:"Neck Chains",price:379,icon:"⛓️"},
+{id:14,name:"Wide Woven Bracelet",cat:"Bracelets",price:329,icon:"🔗"},
+{id:15,name:"Daily Wear Chain",cat:"Neck Chains",price:279,icon:"✨"},
+{id:16,name:"Polished Bracelet",cat:"Bracelets",price:319,icon:"🔗"},
+{id:17,name:"Urban Style Chain",cat:"Neck Chains",price:429,icon:"⛓️"},
+{id:18,name:"Slim Link Bracelet",cat:"Bracelets",price:219,icon:"🔗"},
+{id:19,name:"Classic Jewellery Set",cat:"Jewellery Sets",price:649,icon:"💎"},
+{id:20,name:"Premium Woven Chain",cat:"Neck Chains",price:499,icon:"⛓️"},
+{id:21,name:"Everyday Link Bracelet",cat:"Bracelets",price:239,icon:"🔗"},
+{id:22,name:"Elegant Steel Chain",cat:"Neck Chains",price:359,icon:"✨"},
+{id:23,name:"Heavy Woven Bracelet",cat:"Bracelets",price:399,icon:"🔗"},
+{id:24,name:"Matching Chain Set",cat:"Jewellery Sets",price:749,icon:"💎"}
+];
+const cart={};
+const rupees=n=>"₹"+n.toLocaleString("en-IN");
+function render(){
+const q=document.getElementById("search").value.toLowerCase();
+const c=document.getElementById("category").value;
+document.getElementById("products").innerHTML=products.filter(p=>(c==="All"||p.cat===c)&&p.name.toLowerCase().includes(q)).map(p=>`<article class="card"><div class="art">${p.icon}</div><div class="info"><h3>${p.name}</h3><p>${p.cat}</p><div class="price">${rupees(p.price)}</div><button onclick="add(${p.id})">Add to Cart</button></div></article>`).join("");
+drawCart();
+}
+function add(id){cart[id]=(cart[id]||0)+1;drawCart()}
+function change(id,n){cart[id]=(cart[id]||0)+n;if(cart[id]<=0)delete cart[id];drawCart()}
+function drawCart(){
+const entries=Object.entries(cart);
+document.getElementById("count").textContent=entries.reduce((s,[,q])=>s+q,0);
+document.getElementById("cartitems").innerHTML=entries.length?entries.map(([id,q])=>{const p=products.find(x=>x.id===Number(id));return `<div class="cartrow"><span>${p.name}<br>${rupees(p.price)} × ${q}</span><span><button onclick="change(${id},-1)">−</button> ${q} <button onclick="change(${id},1)">+</button></span></div>`}).join(""):"Your cart is empty.";
+document.getElementById("total").textContent="Total: "+rupees(entries.reduce((s,[id,q])=>s+products.find(p=>p.id===Number(id)).price*q,0));
+}
+document.getElementById("orderform").addEventListener("submit",e=>{
+e.preventDefault();
+if(!Object.keys(cart).length){alert("Please add a product to your cart first.");return}
+const data=new FormData(e.target);
+const names=Object.entries(cart).map(([id,q])=>{const p=products.find(x=>x.id===Number(id));return p.name+" × "+q}).join(", ");
+document.getElementById("message").textContent="Details entered for review. Items: "+names+". Total: "+document.getElementById("total").textContent+". No order or payment has been submitted yet.";
+});
+render();
+</script>
+</body>
+</html>
