@@ -191,7 +191,7 @@ document.querySelectorAll("[data-filter]").forEach(btn=>btn.addEventListener("cl
 $("checkoutForm").addEventListener("submit",e=>{
   e.preventDefault();
   if(!Object.keys(cart).length){showToast("Your bag is empty.");return;}
-  if(STORE.whatsappNumber==="917047156978"||!/^[0-9]{10,15}$/.test(STORE.whatsappNumber)){showToast("প্রথমে কোডে নিজের WhatsApp নম্বর বসাও।");return;}
+  if(!/^[0-9]{10,15}$/.test(STORE.whatsappNumber)){showToast("WhatsApp নম্বরটি কোডে ঠিক করে বসাতে হবে।");return;}
   for(const item of Object.values(cart)){const p=products.find(x=>x.id===item.id);if(!p||getPrice(p,item.size)!==item.price||item.qty>p.stock){showToast("দাম বা স্টক বদলেছে। কার্ট যাচাই করে আবার চেষ্টা করো।");return;}}
   const f=new FormData(e.currentTarget);
   const lines=Object.values(cart).map(item=>{const p=products.find(x=>x.id===item.id);return `• ${p.name} | Size: ${item.size} | Qty: ${item.qty} | ${money(item.price*item.qty)}`;});
@@ -213,7 +213,7 @@ $("checkoutForm").addEventListener("submit",e=>{
     "Please confirm stock, shipping charge and payment before dispatch."
   ].join("\n");
   const url="https://wa.me/"+STORE.whatsappNumber+"?text="+encodeURIComponent(message);
-  window.open(url,"_blank","noopener,noreferrer");
+  window.location.href=url;
 });
 $("year").textContent=new Date().getFullYear();
 renderProducts();renderCart();
