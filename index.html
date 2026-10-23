@@ -1,141 +1,222 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#111827">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="NG SHOP — premium chains and bracelets. Shop silver-tone chains, bracelets and jewellery sets.">
 <title>NG SHOP | Chains & Bracelets</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f8f7f5;color:#222}
-header{background:#111827;color:white;padding:17px;position:sticky;top:0;z-index:2}
-nav{max-width:1000px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:10px}
-.logo{font-size:25px;font-weight:900;letter-spacing:1px}
-button{border:0;padding:12px 16px;border-radius:9px;background:#b58b54;color:white;font-weight:bold;cursor:pointer}
-main{max-width:1000px;margin:auto;padding:16px}
-.hero{background:linear-gradient(135deg,#252a35,#6b6259);color:white;padding:32px 22px;border-radius:18px;margin-bottom:22px}
-.hero h1{font-size:34px;margin:0 0 12px}
-.hero p{line-height:1.6;color:#eee}
-h2{margin-top:24px}
-.filters{display:flex;gap:8px;margin:15px 0;flex-wrap:wrap}
-input,select,textarea{padding:12px;border:1px solid #ddd;border-radius:9px;font-size:15px;min-width:0}
-#search{flex:1;min-width:150px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.card{background:white;border:1px solid #eee;border-radius:13px;overflow:hidden}
-.art{height:140px;background:#e9e5df;display:flex;align-items:center;justify-content:center;font-size:52px}
-.info{padding:12px}
-.info h3{font-size:15px;margin:0 0 8px}
-.info p{font-size:12px;color:#666;min-height:30px}
-.price{font-size:19px;font-weight:bold;margin:10px 0}
-.info button{width:100%;padding:10px 4px}
-.panel{background:white;border:1px solid #eee;border-radius:13px;padding:16px;margin-top:20px}
-.cartrow{display:flex;justify-content:space-between;gap:8px;padding:12px 0;border-bottom:1px solid #eee}
-.cartrow button{padding:5px 10px}
-form{display:grid;gap:10px}
-form input,form textarea{width:100%}
-form textarea{min-height:75px}
-.small{font-size:12px;color:#666;line-height:1.6}
-footer{text-align:center;padding:25px;color:#666;font-size:12px}
-@media(min-width:650px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.art{height:180px}}
+:root{--ink:#171717;--muted:#77736d;--line:#e9e5df;--paper:#fff;--soft:#f8f7f4;--gold:#b58b52;--gold-dark:#8e6838;--green:#176b45;--danger:#b42318;--radius:18px;--shadow:0 8px 28px rgba(24,20,15,.06)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.announcement{background:#171717;color:#fff;text-align:center;padding:9px 12px;font-size:12px;letter-spacing:.04em}.site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.header-inner{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-size:25px;font-weight:850;letter-spacing:.13em;line-height:1}.brand small{display:block;font-size:9px;font-weight:600;letter-spacing:.27em;color:var(--muted);margin-top:6px}.header-actions{display:flex;align-items:center;gap:10px}.icon-btn,.cart-btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 15px;color:var(--ink)}.cart-btn{background:#171717;color:#fff;border-color:#171717;font-weight:650}.hero{max-width:1200px;margin:0 auto;padding:28px 20px 22px}.hero-panel{min-height:350px;overflow:hidden;border-radius:24px;background:#f4f1eb;display:grid;grid-template-columns:1.03fr .97fr;align-items:center}.hero-copy{padding:clamp(25px,5vw,62px)}.eyebrow{font-size:11px;font-weight:750;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark)}h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(36px,5vw,60px);line-height:1.06;font-weight:500;letter-spacing:-.035em;margin:14px 0}.hero-copy p{color:#625e58;max-width:390px;line-height:1.7;font-size:15px}.primary-btn{display:inline-flex;justify-content:center;align-items:center;border:0;border-radius:999px;background:#171717;color:#fff;padding:13px 22px;font-weight:700;margin-top:12px}.primary-btn:active,.add-btn:active{transform:scale(.99)}.hero-image{height:100%;min-height:350px;background:#e7e1d8}.hero-image img{width:100%;height:100%;min-height:350px;object-fit:cover;display:block}.trust-row{max-width:1200px;margin:0 auto;padding:4px 20px 28px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.trust{padding:14px 10px;text-align:center;border:1px solid var(--line);border-radius:14px;font-size:12px;color:#5f5b55}.trust b{display:block;color:var(--ink);font-size:13px;margin-bottom:4px}.shop{max-width:1200px;margin:auto;padding:10px 20px 60px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:14px;margin-bottom:20px}.section-head h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(28px,4vw,38px);margin:0}.section-head p{color:var(--muted);font-size:13px;margin:7px 0 0}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.search{flex:1;min-width:160px;border:1px solid var(--line);border-radius:999px;padding:11px 15px;background:#fff;outline:none}.search:focus,select:focus,input:focus,textarea:focus{border-color:var(--gold);outline:2px solid #b58b5222}.filter-btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 15px;font-size:13px}.filter-btn.active{background:#171717;color:#fff;border-color:#171717}.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.product-card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;min-width:0;transition:transform .2s,box-shadow .2s}.product-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.product-photo{position:relative;background:#f4f1eb;aspect-ratio:4/4.3;overflow:hidden}.product-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}.product-card:hover .product-photo img{transform:scale(1.035)}.tag{position:absolute;left:10px;top:10px;background:#fff;border-radius:999px;padding:5px 9px;font-size:10px;font-weight:700;letter-spacing:.04em}.product-info{padding:14px}.product-name{font-size:15px;font-weight:750;line-height:1.35;margin:0 0 5px}.product-category{color:var(--muted);font-size:12px;margin-bottom:12px}.price-row{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:10px}.price{font-size:19px;font-weight:800}.stock{font-size:10px;color:var(--green);white-space:nowrap}.size-select{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:12px;margin-bottom:9px}.add-btn{width:100%;border:0;border-radius:10px;background:var(--gold);color:#fff;padding:11px 10px;font-size:13px;font-weight:750}.add-btn:disabled{background:#d8d4ce;color:#777;cursor:not-allowed}.empty{grid-column:1/-1;text-align:center;padding:40px 12px;color:var(--muted)}.note{font-size:12px;color:var(--muted);line-height:1.6;margin:18px 0 0}.footer{background:#171717;color:#fff;padding:34px 20px}.footer-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer p{color:#c9c5be;font-size:12px;line-height:1.7;max-width:440px}.footer small{color:#c9c5be}.overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:50;display:none}.overlay.show{display:block}.drawer{position:absolute;right:0;top:0;height:100%;width:min(440px,100%);background:#fff;display:flex;flex-direction:column;padding:20px;overflow:auto}.drawer-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px}.drawer-head h2{font-family:Georgia,serif;font-weight:500;margin:0}.close-btn{border:1px solid var(--line);background:#fff;border-radius:50%;width:38px;height:38px;font-size:20px}.cart-items{flex:1;padding:12px 0}.cart-item{display:grid;grid-template-columns:64px 1fr auto;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);align-items:center}.cart-item img{width:64px;height:70px;object-fit:cover;border-radius:10px;background:var(--soft)}.cart-item h3{font-size:13px;margin:0 0 5px}.cart-item p{font-size:11px;color:var(--muted);margin:0 0 6px}.qty{display:flex;align-items:center;gap:9px}.qty button{width:26px;height:26px;border:1px solid var(--line);border-radius:50%;background:#fff}.remove-btn{border:0;background:none;color:var(--danger);font-size:11px;padding:5px 0}.cart-total{display:flex;justify-content:space-between;font-size:18px;font-weight:800;padding:14px 0;border-top:1px solid var(--line)}.checkout-form{display:grid;gap:10px}.checkout-form input,.checkout-form textarea,.checkout-form select{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff}.checkout-form textarea{min-height:72px;resize:vertical}.checkout-form label{font-size:12px;color:#5e5a54}.checkout-form .primary-btn{width:100%;margin-top:0}.fineprint{font-size:11px;line-height:1.55;color:var(--muted)}.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:80;background:#171717;color:#fff;border-radius:999px;padding:12px 18px;font-size:13px;box-shadow:var(--shadow);display:none;max-width:90%;text-align:center}.toast.show{display:block}.hidden{display:none!important}
+@media(max-width:900px){.product-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.hero-panel{min-height:300px}.hero-image,.hero-image img{min-height:300px}}
+@media(max-width:620px){.announcement{font-size:10px}.header-inner{padding:13px 15px}.brand{font-size:22px}.hero{padding:16px 14px 14px}.hero-panel{grid-template-columns:1fr;min-height:0;border-radius:18px}.hero-copy{padding:25px 22px 16px}.hero-copy h1{font-size:39px}.hero-copy p{font-size:13px;margin-bottom:8px}.hero-image,.hero-image img{min-height:0;height:205px}.trust-row{padding:0 14px 22px;gap:7px}.trust{padding:11px 5px;font-size:10px}.trust b{font-size:11px}.shop{padding:8px 14px 42px}.section-head{align-items:start;flex-direction:column}.section-head h2{font-size:30px}.filters{margin:15px 0}.search{flex-basis:100%}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-card{border-radius:14px}.product-info{padding:10px}.product-name{font-size:13px;min-height:35px}.product-category{font-size:11px;margin-bottom:10px}.price{font-size:17px}.stock{font-size:9px}.product-photo{aspect-ratio:1/1.08}.tag{left:7px;top:7px;font-size:9px;padding:4px 7px}.size-select{font-size:11px;padding:8px}.add-btn{font-size:12px;padding:10px 6px}.icon-btn{display:none}.footer{padding:28px 16px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
 </head>
 <body>
-<header><nav><div class="logo">NG SHOP</div><button onclick="document.getElementById('cart').scrollIntoView({behavior:'smooth'})">Cart (<span id="count">0</span>)</button></nav></header>
+<div class="announcement">PREMIUM CHAINS & BRACELETS · INDIA-WIDE SHIPPING</div>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#" aria-label="NG SHOP home">NG SHOP<small>CHAINS · BRACELETS</small></a>
+    <div class="header-actions">
+      <a class="icon-btn" href="#shop">Shop all</a>
+      <button class="cart-btn" id="openCart" type="button" aria-label="Open shopping cart">Bag (<span id="cartCount">0</span>)</button>
+    </div>
+  </div>
+</header>
 <main>
 <section class="hero">
-<h1>Style That Speaks.</h1>
-<p>Discover stylish chains and bracelets for your everyday look. Explore your favourite designs at NG SHOP.</p>
-<button onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Shop Now</button>
+  <div class="hero-panel">
+    <div class="hero-copy">
+      <div class="eyebrow">Everyday shine. Timeless style.</div>
+      <h1>Find your<br>signature chain.</h1>
+      <p>Discover carefully selected chains and bracelets made to finish your look — simple, confident, timeless.</p>
+      <a class="primary-btn" href="#shop">Explore collection&nbsp; ↗</a>
+    </div>
+    <div class="hero-image"><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1100&q=85" alt="Premium jewellery product photography" fetchpriority="high"></div>
+  </div>
 </section>
-
-<section id="shop">
-<h2>Our Collection</h2>
-<div class="filters">
-<input id="search" placeholder="Search products..." oninput="render()">
-<select id="category" onchange="render()">
-<option value="All">All Products</option>
-<option value="Neck Chains">Neck Chains</option>
-<option value="Bracelets">Bracelets</option>
-<option value="Jewellery Sets">Jewellery Sets</option>
-</select>
-</div>
-<div class="grid" id="products"></div>
+<section class="trust-row" aria-label="Store benefits">
+  <div class="trust"><b>✦ Curated styles</b>Chains & bracelets</div>
+  <div class="trust"><b>₹ Transparent pricing</b>Price shown before checkout</div>
+  <div class="trust"><b>↗ India-wide</b>Shipping availability checked</div>
 </section>
-
-<section class="panel" id="cart">
-<h2>Your Cart</h2>
-<div id="cartitems">Your cart is empty.</div>
-<h3 id="total">Total: ₹0</h3>
-</section>
-
-<section class="panel" id="checkout">
-<h2>Delivery Details</h2>
-<p class="small">Enter your details to prepare an order. Online payment and actual order submission are not enabled yet.</p>
-<form id="orderform">
-<input name="name" placeholder="Full name" required maxlength="80">
-<input name="phone" type="tel" placeholder="10-digit mobile number" pattern="[6-9][0-9]{9}" required>
-<textarea name="address" placeholder="Full delivery address" required maxlength="300"></textarea>
-<input name="city" placeholder="City" required maxlength="80">
-<input name="state" placeholder="State" required maxlength="80">
-<input name="pin" placeholder="6-digit PIN code" inputmode="numeric" pattern="[1-9][0-9]{5}" required>
-<button type="submit">Review Order</button>
-</form>
-<p class="small" id="message" aria-live="polite"></p>
+<section class="shop" id="shop">
+  <div class="section-head"><div><div class="eyebrow">The collection</div><h2>Shop jewellery</h2><p>Choose your design and size. Prices are shown in Indian Rupees.</p></div></div>
+  <div class="filters">
+    <input id="searchInput" class="search" type="search" placeholder="Search chains or bracelets…" aria-label="Search products">
+    <button class="filter-btn active" data-filter="All" type="button">All products</button>
+    <button class="filter-btn" data-filter="Neck Chains" type="button">Neck chains</button>
+    <button class="filter-btn" data-filter="Bracelets" type="button">Bracelets</button>
+    <button class="filter-btn" data-filter="Sets" type="button">Sets</button>
+  </div>
+  <div class="product-grid" id="productGrid" aria-live="polite"></div>
+  <p class="note">Product photos are illustrative and loaded from Unsplash. Confirm the exact material, finish, size, price and availability before accepting orders. Shipping charges and delivery estimates should be confirmed at checkout.</p>
 </section>
 </main>
-<footer>NG SHOP · Chains & Bracelets<br>Product prices and availability will be updated soon.<br>Secure payment, shipping and return policies must be configured before launch.</footer>
+<footer class="footer"><div class="footer-inner"><div><div class="brand">NG SHOP<small style="color:#c9c5be">CHAINS · BRACELETS</small></div><p>Minimal styles. Everyday confidence. Thank you for shopping with NG SHOP.</p></div><div><b>Customer support</b><p>For product and delivery questions, contact the store through WhatsApp after adding your number in the website code.</p><small>© <span id="year"></span> NG SHOP</small></div></div></footer>
+
+<div class="overlay" id="cartOverlay" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+  <aside class="drawer">
+    <div class="drawer-head"><h2 id="cartTitle">Your bag</h2><button class="close-btn" id="closeCart" type="button" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-total"><span>Total</span><span id="cartTotal">₹0</span></div>
+    <form class="checkout-form" id="checkoutForm">
+      <label for="customerName">Full name *</label><input id="customerName" name="customerName" autocomplete="name" required maxlength="100" placeholder="Your full name">
+      <label for="customerPhone">Mobile number *</label><input id="customerPhone" name="customerPhone" type="tel" autocomplete="tel" required inputmode="tel" pattern="[0-9+() -]{8,20}" placeholder="10-digit phone number">
+      <label for="customerAddress">Full delivery address *</label><textarea id="customerAddress" name="customerAddress" autocomplete="street-address" required maxlength="500" placeholder="House, street, area, landmark"></textarea>
+      <label for="customerCity">City / Town *</label><input id="customerCity" name="customerCity" required maxlength="100" placeholder="City / town">
+      <label for="customerState">State *</label><input id="customerState" name="customerState" required maxlength="100" placeholder="State">
+      <label for="customerPin">PIN code *</label><input id="customerPin" name="customerPin" required inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="6-digit PIN code">
+      <label for="customerNote">Order note (optional)</label><textarea id="customerNote" name="customerNote" maxlength="300" placeholder="Any special instructions"></textarea>
+      <button class="primary-btn" type="submit">Send order on WhatsApp</button>
+      <p class="fineprint">This button opens WhatsApp with your order details for you to send. It does not charge the customer or confirm payment. Online payments must be integrated separately through a payment provider and a secure backend before taking prepaid orders.</p>
+    </form>
+  </aside>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
-const products=[
-{id:1,name:"Classic Chain - 18 Inch",cat:"Neck Chains",price:0,icon:"⛓️",size:"18 inch",stock:1000},
-{id:2,name:"Woven Silver Bracelet",cat:"Bracelets",price:249,icon:"🔗"},
-{id:3,name:"Stainless Steel Chain",cat:"Neck Chains",price:349,icon:"⛓️"},
-{id:4,name:"Modern Link Bracelet",cat:"Bracelets",price:279,icon:"🔗"},
-{id:5,name:"Premium Style Chain",cat:"Neck Chains",price:399,icon:"✨"},
-{id:6,name:"Everyday Bracelet",cat:"Bracelets",price:199,icon:"🔗"},
-{id:7,name:"Bold Link Chain",cat:"Neck Chains",price:449,icon:"⛓️"},
-{id:8,name:"Silver Tone Bracelet",cat:"Bracelets",price:299,icon:"✨"},
-{id:9,name:"Minimal Chain",cat:"Neck Chains",price:229,icon:"⛓️"},
-{id:10,name:"Classic Link Bracelet",cat:"Bracelets",price:259,icon:"🔗"},
-{id:11,name:"Chain and Bracelet Set",cat:"Jewellery Sets",price:599,icon:"💎"},
-{id:12,name:"Premium Gift Set",cat:"Jewellery Sets",price:699,icon:"🎁"},
-{id:13,name:"Textured Silver Chain",cat:"Neck Chains",price:379,icon:"⛓️"},
-{id:14,name:"Wide Woven Bracelet",cat:"Bracelets",price:329,icon:"🔗"},
-{id:15,name:"Daily Wear Chain",cat:"Neck Chains",price:279,icon:"✨"},
-{id:16,name:"Polished Bracelet",cat:"Bracelets",price:319,icon:"🔗"},
-{id:17,name:"Urban Style Chain",cat:"Neck Chains",price:429,icon:"⛓️"},
-{id:18,name:"Slim Link Bracelet",cat:"Bracelets",price:219,icon:"🔗"},
-{id:19,name:"Classic Jewellery Set",cat:"Jewellery Sets",price:649,icon:"💎"},
-{id:20,name:"Premium Woven Chain",cat:"Neck Chains",price:499,icon:"⛓️"},
-{id:21,name:"Everyday Link Bracelet",cat:"Bracelets",price:239,icon:"🔗"},
-{id:22,name:"Elegant Steel Chain",cat:"Neck Chains",price:359,icon:"✨"},
-{id:23,name:"Heavy Woven Bracelet",cat:"Bracelets",price:399,icon:"🔗"},
-{id:24,name:"Matching Chain Set",cat:"Jewellery Sets",price:749,icon:"💎"}
+"use strict";
+
+/* STORE SETTINGS
+   1) Replace 91XXXXXXXXXX with your WhatsApp number, including India's country code 91.
+   2) Add your actual product prices in the `prices` objects below.
+   3) Keep prices as numbers, for example: 18: 399.
+*/
+const STORE = {
+  name: "NG SHOP",
+  whatsappNumber: "91XXXXXXXXXX"
+};
+
+/* A null price means "price not set"; customers cannot add that variant to cart.
+   Replace example prices with your real selling prices before launch.
+   stock is an initial display value only; a static website cannot securely reserve stock. */
+const products = [
+  {id:1,name:"Classic Chain",category:"Neck Chains",tag:"First collection",image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=80",sizes:["18 inch"],prices:{"18 inch":null},stock:1000},
+  {id:2,name:"Silver Link Chain",category:"Neck Chains",tag:"Popular",image:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=80",sizes:["18 inch","20 inch","22 inch"],prices:{"18 inch":299,"20 inch":329,"22 inch":359},stock:100},
+  {id:3,name:"Woven Silver Bracelet",category:"Bracelets",tag:"Everyday",image:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=80",sizes:["7 inch","8 inch","9 inch"],prices:{"7 inch":249,"8 inch":269,"9 inch":289},stock:100},
+  {id:4,name:"Stainless Steel Chain",category:"Neck Chains",tag:"Classic",image:"https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=80",sizes:["18 inch","20 inch","22 inch"],prices:{"18 inch":349,"20 inch":379,"22 inch":409},stock:100},
+  {id:5,name:"Minimal Link Bracelet",category:"Bracelets",tag:"Minimal",image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=80",sizes:["7 inch","8 inch"],prices:{"7 inch":229,"8 inch":249},stock:100},
+  {id:6,name:"Polished Silver Chain",category:"Neck Chains",tag:"New style",image:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=80",sizes:["18 inch","20 inch","22 inch"],prices:{"18 inch":399,"20 inch":429,"22 inch":459},stock:100},
+  {id:7,name:"Bold Link Chain",category:"Neck Chains",tag:"Bold",image:"https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=80",sizes:["18 inch","20 inch","22 inch"],prices:{"18 inch":449,"20 inch":479,"22 inch":509},stock:100},
+  {id:8,name:"Classic Steel Bracelet",category:"Bracelets",tag:"Classic",image:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=80",sizes:["7 inch","8 inch","9 inch"],prices:{"7 inch":279,"8 inch":299,"9 inch":319},stock:100},
+  {id:9,name:"Everyday Chain",category:"Neck Chains",tag:"Everyday",image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=80",sizes:["18 inch","20 inch"],prices:{"18 inch":279,"20 inch":309},stock:100},
+  {id:10,name:"Wide Woven Bracelet",category:"Bracelets",tag:"Statement",image:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=80",sizes:["7 inch","8 inch"],prices:{"7 inch":329,"8 inch":349},stock:100},
+  {id:11,name:"Chain & Bracelet Set",category:"Sets",tag:"Matching set",image:"https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=80",sizes:["Standard"],prices:{"Standard":599},stock:100},
+  {id:12,name:"Premium Link Chain",category:"Neck Chains",tag:"Premium",image:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=80",sizes:["18 inch","20 inch","22 inch"],prices:{"18 inch":499,"20 inch":529,"22 inch":559},stock:100},
+  {id:13,name:"Textured Steel Chain",category:"Neck Chains",tag:"Textured",image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=80",sizes:["18 inch","20 inch"],prices:{"18 inch":379,"20 inch":409},stock:100},
+  {id:14,name:"Slim Link Bracelet",category:"Bracelets",tag:"Minimal",image:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=80",sizes:["7 inch","8 inch"],prices:{"7 inch":199,"8 inch":219},stock:100},
+  {id:15,name:"Modern Steel Chain",category:"Neck Chains",tag:"Modern",image:"https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=80",sizes:["18 inch","20 inch","22 inch"],prices:{"18 inch":429,"20 inch":459,"22 inch":489},stock:100},
+  {id:16,name:"Polished Link Bracelet",category:"Bracelets",tag:"Polished",image:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=80",sizes:["7 inch","8 inch"],prices:{"7 inch":259,"8 inch":279},stock:100},
+  {id:17,name:"Heavy Woven Chain",category:"Neck Chains",tag:"Bold",image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=80",sizes:["18 inch","20 inch","22 inch"],prices:{"18 inch":549,"20 inch":579,"22 inch":609},stock:100},
+  {id:18,name:"Everyday Steel Bracelet",category:"Bracelets",tag:"Everyday",image:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=80",sizes:["7 inch","8 inch","9 inch"],prices:{"7 inch":239,"8 inch":259,"9 inch":279},stock:100},
+  {id:19,name:"Silver Tone Chain",category:"Neck Chains",tag:"Classic",image:"https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=80",sizes:["18 inch","20 inch"],prices:{"18 inch":319,"20 inch":349},stock:100},
+  {id:20,name:"Gift Jewellery Set",category:"Sets",tag:"Gift idea",image:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=80",sizes:["Standard"],prices:{"Standard":699},stock:100},
+  {id:21,name:"Double Link Chain",category:"Neck Chains",tag:"Modern",image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=80",sizes:["18 inch","20 inch"],prices:{"18 inch":389,"20 inch":419},stock:100},
+  {id:22,name:"Classic Woven Bracelet",category:"Bracelets",tag:"Woven",image:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=80",sizes:["7 inch","8 inch"],prices:{"7 inch":299,"8 inch":319},stock:100},
+  {id:23,name:"Premium Steel Chain",category:"Neck Chains",tag:"Premium",image:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=80",sizes:["18 inch","20 inch","22 inch"],prices:{"18 inch":599,"20 inch":629,"22 inch":659},stock:100},
+  {id:24,name:"Matching Chain Set",category:"Sets",tag:"Matching set",image:"https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=80",sizes:["Standard"],prices:{"Standard":749},stock:100}
 ];
-const cart={};
-const rupees=n=>"₹"+n.toLocaleString("en-IN");
-function render(){
-const q=document.getElementById("search").value.toLowerCase();
-const c=document.getElementById("category").value;
-document.getElementById("products").innerHTML=products.filter(p=>(c==="All"||p.cat===c)&&p.name.toLowerCase().includes(q)).map(p=>`<article class="card"><div class="art">${p.icon}</div><div class="info"><h3>${p.name}</h3><p>${p.cat}</p><div class="price">${rupees(p.price)}</div><button onclick="add(${p.id})">Add to Cart</button></div></article>`).join("");
-drawCart();
+
+const money = n => new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(n);
+const $ = id => document.getElementById(id);
+let activeFilter = "All";
+let cart = {};
+try { cart = JSON.parse(localStorage.getItem("ngshop-cart") || "{}") || {}; } catch (_) { cart = {}; }
+
+function getPrice(product,size){const p=product.prices[size];return Number.isFinite(p)&&p>0?p:null;}
+function saveCart(){try{localStorage.setItem("ngshop-cart",JSON.stringify(cart));}catch(_){}}
+function cartQty(){return Object.values(cart).reduce((sum,item)=>sum+item.qty,0);}
+function cartTotal(){return Object.values(cart).reduce((sum,item)=>sum+item.qty*item.price,0);}
+function showToast(message){const toast=$("toast");toast.textContent=message;toast.classList.add("show");window.clearTimeout(showToast.timer);showToast.timer=window.setTimeout(()=>toast.classList.remove("show"),2600);}
+
+function renderProducts(){
+  const query=$("searchInput").value.trim().toLowerCase();
+  const list=products.filter(p=>(activeFilter==="All"||p.category===activeFilter)&&(p.name+" "+p.category).toLowerCase().includes(query));
+  $("productGrid").innerHTML="";
+  if(!list.length){$("productGrid").innerHTML='<div class="empty">No products found. Try another search.</div>';return;}
+  for(const p of list){
+    const card=document.createElement("article");card.className="product-card";
+    const price=p.prices[p.sizes[0]];
+    const minPrice=p.sizes.map(s=>getPrice(p,s)).filter(v=>v!==null).sort((a,b)=>a-b)[0];
+    const sizeOptions=p.sizes.map(s=>`<option value="${s}">${s}</option>`).join("");
+    card.innerHTML=`
+      <div class="product-photo"><img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/700x750/f4f1eb/6b6257?text=NG+SHOP'"><span class="tag">${p.tag}</span></div>
+      <div class="product-info">
+        <h3 class="product-name">${p.name}</h3><div class="product-category">${p.category}</div>
+        <div class="price-row"><span class="price" data-price-for="${p.id}">${minPrice===undefined?"Price soon":money(minPrice)}</span><span class="stock">${p.stock>0?"In stock":"Sold out"}</span></div>
+        <label class="hidden" for="size-${p.id}">Choose size</label>
+        <select class="size-select" id="size-${p.id}" aria-label="Choose size for ${p.name}">${sizeOptions}</select>
+        <button class="add-btn" data-add="${p.id}" type="button">Add to bag</button>
+      </div>`;
+    $("productGrid").appendChild(card);
+    const select=card.querySelector("select");
+    const button=card.querySelector("button");
+    const update=()=>{const chosen=select.value;const value=getPrice(p,chosen);card.querySelector("[data-price-for]").textContent=value===null?"Price soon":money(value);button.disabled=value===null||p.stock<1;button.textContent=value===null?"Price not set":p.stock<1?"Sold out":"Add to bag";};
+    select.addEventListener("change",update);update();
+    button.addEventListener("click",()=>addToCart(p.id,select.value));
+  }
 }
-function add(id){cart[id]=(cart[id]||0)+1;drawCart()}
-function change(id,n){cart[id]=(cart[id]||0)+n;if(cart[id]<=0)delete cart[id];drawCart()}
-function drawCart(){
-const entries=Object.entries(cart);
-document.getElementById("count").textContent=entries.reduce((s,[,q])=>s+q,0);
-document.getElementById("cartitems").innerHTML=entries.length?entries.map(([id,q])=>{const p=products.find(x=>x.id===Number(id));return `<div class="cartrow"><span>${p.name}<br>${rupees(p.price)} × ${q}</span><span><button onclick="change(${id},-1)">−</button> ${q} <button onclick="change(${id},1)">+</button></span></div>`}).join(""):"Your cart is empty.";
-document.getElementById("total").textContent="Total: "+rupees(entries.reduce((s,[id,q])=>s+products.find(p=>p.id===Number(id)).price*q,0));
+function addToCart(id,size){
+  const p=products.find(x=>x.id===id);const price=getPrice(p,size);if(price===null){showToast("এই সাইজের দাম এখনও যোগ করা হয়নি।");return;}
+  const key=id+"|"+size;const existing=cart[key]?.qty||0;
+  if(existing>=p.stock){showToast("স্টকের সীমা অতিক্রম করা যাবে না।");return;}
+  cart[key]={id,size,price,qty:existing+1};saveCart();renderCart();showToast("Added to your bag.");
 }
-document.getElementById("orderform").addEventListener("submit",e=>{
-e.preventDefault();
-if(!Object.keys(cart).length){alert("Please add a product to your cart first.");return}
-const data=new FormData(e.target);
-const names=Object.entries(cart).map(([id,q])=>{const p=products.find(x=>x.id===Number(id));return p.name+" × "+q}).join(", ");
-document.getElementById("message").textContent="Details entered for review. Items: "+names+". Total: "+document.getElementById("total").textContent+". No order or payment has been submitted yet.";
+function changeQty(key,delta){
+  if(!cart[key])return;const item=cart[key];const p=products.find(x=>x.id===item.id);const next=item.qty+delta;
+  if(next<=0)delete cart[key];else if(next<=p.stock)item.qty=next;else{showToast("স্টকে যত আছে, তার বেশি যোগ করা যাবে না।");return;}
+  saveCart();renderCart();
+}
+function renderCart(){
+  $("cartCount").textContent=cartQty();$("cartTotal").textContent=money(cartTotal());const root=$("cartItems");root.innerHTML="";
+  const entries=Object.entries(cart);
+  if(!entries.length){root.innerHTML='<div class="empty">Your bag is empty.<br><a href="#shop" id="continueShopping" style="text-decoration:underline;color:#8e6838">Explore the collection</a></div>';return;}
+  for(const [key,item] of entries){
+    const p=products.find(x=>x.id===item.id);if(!p)continue;
+    const row=document.createElement("div");row.className="cart-item";
+    row.innerHTML=`<img src="${p.image}" alt=""><div><h3>${p.name}</h3><p>${item.size} · ${money(item.price)} each</p><div class="qty"><button type="button" data-minus aria-label="Decrease quantity">−</button><span>${item.qty}</span><button type="button" data-plus aria-label="Increase quantity">+</button></div><button type="button" class="remove-btn" data-remove>Remove</button></div><b>${money(item.price*item.qty)}</b>`;
+    row.querySelector("[data-minus]").addEventListener("click",()=>changeQty(key,-1));row.querySelector("[data-plus]").addEventListener("click",()=>changeQty(key,1));row.querySelector("[data-remove]").addEventListener("click",()=>{delete cart[key];saveCart();renderCart();});root.appendChild(row);
+  }
+}
+function openCart(){ $("cartOverlay").classList.add("show");document.body.style.overflow="hidden"; }
+function closeCart(){ $("cartOverlay").classList.remove("show");document.body.style.overflow=""; }
+$("openCart").addEventListener("click",openCart);$("closeCart").addEventListener("click",closeCart);
+$("cartOverlay").addEventListener("click",e=>{if(e.target===$("cartOverlay"))closeCart();});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeCart();});
+$("searchInput").addEventListener("input",renderProducts);
+document.querySelectorAll("[data-filter]").forEach(btn=>btn.addEventListener("click",()=>{activeFilter=btn.dataset.filter;document.querySelectorAll("[data-filter]").forEach(b=>b.classList.toggle("active",b===btn));renderProducts();}));
+
+$("checkoutForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  if(!Object.keys(cart).length){showToast("Your bag is empty.");return;}
+  if(STORE.whatsappNumber==="91XXXXXXXXXX"||!/^[0-9]{10,15}$/.test(STORE.whatsappNumber)){showToast("প্রথমে কোডে নিজের WhatsApp নম্বর বসাও।");return;}
+  for(const item of Object.values(cart)){const p=products.find(x=>x.id===item.id);if(!p||getPrice(p,item.size)!==item.price||item.qty>p.stock){showToast("দাম বা স্টক বদলেছে। কার্ট যাচাই করে আবার চেষ্টা করো।");return;}}
+  const f=new FormData(e.currentTarget);
+  const lines=Object.values(cart).map(item=>{const p=products.find(x=>x.id===item.id);return `• ${p.name} | Size: ${item.size} | Qty: ${item.qty} | ${money(item.price*item.qty)}`;});
+  const orderId="NG"+Date.now().toString().slice(-8);
+  const message=[
+    `New order request — ${STORE.name}`,
+    `Order reference: ${orderId}`,"",
+    ...lines,"",
+    `Product total: ${money(cartTotal())}`,
+    "Shipping: To be confirmed",
+    "Payment: Not yet collected / pending confirmation","",
+    `Name: ${f.get("customerName")}`,
+    `Phone: ${f.get("customerPhone")}`,
+    `Address: ${f.get("customerAddress")}`,
+    `City: ${f.get("customerCity")}`,
+    `State: ${f.get("customerState")}`,
+    `PIN: ${f.get("customerPin")}`,
+    `Note: ${f.get("customerNote")||"None"}`,"",
+    "Please confirm stock, shipping charge and payment before dispatch."
+  ].join("\n");
+  const url="https://wa.me/"+STORE.whatsappNumber+"?text="+encodeURIComponent(message);
+  window.open(url,"_blank","noopener,noreferrer");
 });
-render();
+$("year").textContent=new Date().getFullYear();
+renderProducts();renderCart();
 </script>
 </body>
 </html>
